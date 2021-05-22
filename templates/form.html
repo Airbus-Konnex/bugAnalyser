@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{{ title }}Bug Report Analysis</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Welcome To AirBus</h1>
+		<p><h1>Analysis the reported Comment</h1>
+		</p>
+        <form method="POST">
+            <textarea name="text1" placeholder="Say Something: ...." rows="10" cols="109"></textarea><br><br>
+
+            <input class="example_a" type="submit">
+        </form>
+        {% if final %}
+        <div>
+            <h2>Reported Comment </h2> '{{ text1 }}' <h2>is {{ final }}% positive !</h2>
+            {% else %}
+            <p></p>
+            {% endif %}
+        </div>
+        <span>by Team - Run Time Terror</span>
+    </body>
+</html>
